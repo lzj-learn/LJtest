@@ -1,0 +1,5 @@
+print("hello world")
+a = list([1, 2])
+print(a)
+a.append('wasd')
+print(a)

@@ -28,6 +28,7 @@ c2 = list('哈哈哈哈')
 print(c2, type(c2))
 
 
+# 作业
 d = dict({1: 2, 3: 4})
 d1 = 'str'
 print((len(d)+len(d1)))   # 一组key-value为一个长度

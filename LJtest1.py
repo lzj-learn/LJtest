@@ -33,4 +33,3 @@ d = dict({1: 2, 3: 4})
 d1 = 'str'
 print((len(d)+len(d1)))   # 一组key-value为一个长度
 # 也可以使用len(d+d1)效果是一样的
-# git

@@ -90,3 +90,22 @@ for x in range(10):
 # random包的效果
 g = random.randint(10, 100)     # 随机生成一个10-100的随机数
 print(g)
+
+
+# test4作业：定义一个方法来判断用户输入的账号密码是否符合规范
+def check():    # 将输入写进函数中
+    username = input('请输入账号:')
+    password = input('请输入密码:')
+    if len(username) >= 5 and len(username) <= 8:
+        if 'a' <= username[0] <= 'z':
+            if 8 <= len(password) <= 16:
+                return True
+            else:
+                return "密码长度不符合规范"
+        else:
+            return "账号首字母不是英文小写"
+    else:
+        return "账号长度不符合规范"
+
+
+print(check())  # 函数中有return的时候需要用print来看到return

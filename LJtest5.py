@@ -1,3 +1,4 @@
+import time
 # 类的概念
 """
 class后面声明类的名称,类的名称首字母必须大写
@@ -78,3 +79,25 @@ jessica.work()
 
 
 # 文件的读写改动
+text = input("请输入内容：")    # 将text的内容写入测试.txt文件里
+with open("测试.txt", "w", encoding="utf8") as f:
+    f.write(text+"\n")   # 如果文件里面原来有内容的话w模式会将里面的内容清空后再写入
+
+text2 = input("请输入追加的内容：")    # 将text的内容写入测试.txt文件里
+with open("测试.txt", "a", encoding="utf8") as f2:
+    f2.write(text2+"\n")   # 使用a模式就可以在文件里面追加内容,\n可以达到换行的效果
+
+# 日记本功能
+now = time.strftime("%y-%m-%d %H:%M:%S")    # 用time包获取当前时间(年月日时分秒)
+
+text3 = input("请输入内容：")    # 将text的内容写入测试.txt文件里
+with open("E:/测试.txt", "w", encoding="utf8") as f3:
+    f3.write(now+"\n")      # 将时间写入txt中
+    f3.write(text3+"\n")    # 这里同过写入绝对路径将测试.txt文件写入E盘中
+    f3.write("-----------------\n")
+
+with open("E:/测试.txt", "r", encoding="utf8") as f4:
+    text4 = f4.read()
+    print(text4)    # 这里显示出来的内容是list形式
+for i in text4:
+    print(i)    # list可以直接使用循环来遍历
